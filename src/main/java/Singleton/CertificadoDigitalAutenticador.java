@@ -3,18 +3,13 @@
 package Singleton;
 
 
-class CertificadoDigitalAutenticador {
+public class CertificadoDigitalAutenticador {
 
-    private static CertificadoDigitalAutenticador instanciaUnica;
+    private CertificadoDigitalAutenticador() {};
 
-    private CertificadoDigitalAutenticador() {
-
-    }
+    private static CertificadoDigitalAutenticador instanciaUnica = new CertificadoDigitalAutenticador();
 
     public static CertificadoDigitalAutenticador getInstance() {
-        if (instanciaUnica == null) {
-            instanciaUnica = new CertificadoDigitalAutenticador();
-        }
         return instanciaUnica;
     }
 
